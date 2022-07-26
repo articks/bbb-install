@@ -256,7 +256,7 @@ main() {
     if ! apt-key list MongoDB | grep -q 4.4; then
       wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
     fi
-    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+    echo "deb [ arch=amd64 ] https://mirror.yandex.ru/mirrors/repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
     rm -f /etc/apt/sources.list.d/mongodb-org-4.2.list
 
     touch /root/.rnd
